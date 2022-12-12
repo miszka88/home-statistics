@@ -1,0 +1,24 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/home-stats-app/node_modules
+/home-stats-app/.pnp
+/home-stats-app/.pnp.js
+
+# testing
+/home-stats-app/coverage
+
+# production
+/home-stats-app/build
+
+# misc
+/home-stats-app/.DS_Store
+/home-stats-app/.env.local
+/home-stats-app/.env.development.local
+/home-stats-app/.env.test.local
+/home-stats-app/.env.production.local
+
+/home-stats-app/npm-debug.log*
+/home-stats-app/yarn-debug.log*
+/home-stats-app/yarn-error.log*
