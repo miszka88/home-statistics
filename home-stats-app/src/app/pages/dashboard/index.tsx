@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import { Button, Icon } from 'semantic-ui-react';
 import { AddStatsModal } from './components/AddStatsModal';
+import { StatsTable } from './components/StatsTable';
 
 export const StatsDashboard: FC = () => {
   const [isAddStatsModalOpen, setIsAddStatsModalOpen] = useState(false);
@@ -13,6 +14,8 @@ export const StatsDashboard: FC = () => {
           <Icon name='plus' />
         </Button.Content>
       </Button>
+
+      <StatsTable data={[]} />
 
       <AddStatsModal isOpen={isAddStatsModalOpen} onClose={() => setIsAddStatsModalOpen(false)} />
     </>

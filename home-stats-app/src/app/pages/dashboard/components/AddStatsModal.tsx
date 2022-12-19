@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Modal, Button, Icon } from 'semantic-ui-react';
+import { useSaveToFile } from '../../../hooks';
 import { ConsuptionStats, StatsForm } from './StatsForm';
 
 type Props = {
@@ -8,7 +9,9 @@ type Props = {
 };
 
 export const AddStatsModal: FC<Props> = ({ isOpen, onClose }) => {
+  const saveAsFile = useSaveToFile();
   const submit = (data: ConsuptionStats) => {
+    saveAsFile('json', data);
     onClose();
   };
 

@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0",
-    "@semantic-ui-react/craco-less": "^3.0.0"
+    "@semantic-ui-react/craco-less": "^3.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0"
   }
 }
-
