@@ -1,20 +1,14 @@
 import { FC } from 'react';
 import { Modal, Button, Icon } from 'semantic-ui-react';
-import { useSaveToFile } from '../../../hooks';
-import { ConsuptionStats, StatsForm } from './StatsForm';
+import { ConsumptionStats, StatsForm } from './StatsForm';
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
+  onSubmit: (stats: ConsumptionStats) => void;
 };
 
-export const AddStatsModal: FC<Props> = ({ isOpen, onClose }) => {
-  const saveAsFile = useSaveToFile();
-  const submit = (data: ConsuptionStats) => {
-    saveAsFile('json', data);
-    onClose();
-  };
-
+export const AddStatsModal: FC<Props> = ({ isOpen, onClose, onSubmit }) => {
   return (
     <Modal open={isOpen} dimmer='blurring'>
       <Modal.Header>
@@ -22,7 +16,7 @@ export const AddStatsModal: FC<Props> = ({ isOpen, onClose }) => {
         Add stats
       </Modal.Header>
       <Modal.Content>
-        <StatsForm handleSubmit={submit} />
+        <StatsForm handleSubmit={(stats) => onSubmit(stats)} />
       </Modal.Content>
       <Modal.Actions>
         <Button animated='fade' secondary onClick={onClose}>

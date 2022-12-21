@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { Form } from 'semantic-ui-react';
 import { StatsInput } from './StatsInput';
 
-export type ConsuptionStats = {
+export type ConsumptionStats = {
   hotWaterConsumption: Number;
   coldWaterConsumption: Number;
   energyConsumption: Number;
@@ -10,11 +10,11 @@ export type ConsuptionStats = {
 };
 
 type Props = {
-  handleSubmit: (data: ConsuptionStats) => void;
+  handleSubmit: (data: ConsumptionStats) => void;
 };
 
 export const StatsForm: FC<Props> = ({ handleSubmit }) => {
-  const [consumption, setConsumption] = useState<ConsuptionStats>({
+  const [consumption, setConsumption] = useState<ConsumptionStats>({
     coldWaterConsumption: 0,
     energyConsumption: 0,
     heatingConsumption: 0,
