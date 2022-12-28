@@ -1,0 +1,11 @@
+[
+  {
+    "stats": {
+      "coldWaterConsumption": 10.721,
+      "energyConsumption": 113,
+      "heatingConsumption": 0.316,
+      "hotWaterConsumption": 5.331
+    },
+    "createdAt": "2022-12-20T16:17:31.620Z"
+  }
+]
