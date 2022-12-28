@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { BarChart, Bar, ResponsiveContainer, Tooltip, Legend, XAxis } from 'recharts';
+import { BarChart, Bar, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 import { ConsumptionStatsRecord } from '..';
 
 type Props = {

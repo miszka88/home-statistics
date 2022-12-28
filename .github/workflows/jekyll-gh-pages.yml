@@ -1,0 +1,22 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16.17
+      - run: yarn --cwd home-stats-app
+      - run: yarn --cwd home-stats-app build 
+      - run: mv home-stats-app/build dist
+      - uses: peaceiris/actions-gh-pages@v3
+        with:        
+          publish_dir: ./dist
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
