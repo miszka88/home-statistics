@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import { Button, Icon } from 'semantic-ui-react';
 import { useCurrentDate, useSaveToFile } from '../../hooks';
 import { AddStatsModal } from './components/AddStatsModal';
+import { ConsumptionsChart } from './components/ConsumptionsChart';
 import { ConsumptionStats } from './components/StatsForm';
 import { StatsTable } from './components/StatsTable';
 
@@ -42,6 +43,8 @@ export const StatsDashboard: FC = () => {
       </Button>
 
       <StatsTable data={data} />
+
+      <ConsumptionsChart data={data} />
 
       <AddStatsModal isOpen={isAddStatsModalOpen} onClose={() => setIsAddStatsModalOpen(false)} onSubmit={handleSubmit} />
     </>
